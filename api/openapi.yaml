@@ -72,7 +72,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/inline_response_400'
-          description: Invalid Request
+          description: Invalid request
       x-contentType: application/json
       x-accepts: application/json
   /plans/{planner_name}:
@@ -103,6 +103,25 @@ paths:
           description: Invalid request
       x-accepts: application/json
 components:
+  parameters:
+    PageLimit:
+      description: Limit the number of plans on a page
+      explode: true
+      in: query
+      name: limit
+      required: false
+      schema:
+        type: integer
+      style: form
+    PageOffset:
+      description: Specifies the page number of the plans to be displayed
+      explode: true
+      in: query
+      name: offset
+      required: false
+      schema:
+        type: integer
+      style: form
   requestBodies:
     inline_object:
       content:
@@ -110,6 +129,13 @@ components:
           schema:
             $ref: '#/components/schemas/inline_object'
       required: true
+  responses:
+    "400Error":
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/inline_response_400'
+      description: Invalid request
   schemas:
     plan:
       example:

@@ -304,7 +304,7 @@ public class DefaultApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successfully Registered a new trainning plan </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Invalid Request </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid request </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call plansPostCall(InlineObject inlineObject, final ApiCallback _callback) throws ApiException {
@@ -360,7 +360,7 @@ public class DefaultApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successfully Registered a new trainning plan </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Invalid Request </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid request </td><td>  -  </td></tr>
      </table>
      */
     public void plansPost(InlineObject inlineObject) throws ApiException {
@@ -377,7 +377,7 @@ public class DefaultApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successfully Registered a new trainning plan </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Invalid Request </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid request </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Void> plansPostWithHttpInfo(InlineObject inlineObject) throws ApiException {
@@ -396,7 +396,7 @@ public class DefaultApi {
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
         <tr><td> 200 </td><td> Successfully Registered a new trainning plan </td><td>  -  </td></tr>
-        <tr><td> 400 </td><td> Invalid Request </td><td>  -  </td></tr>
+        <tr><td> 400 </td><td> Invalid request </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call plansPostAsync(InlineObject inlineObject, final ApiCallback<Void> _callback) throws ApiException {

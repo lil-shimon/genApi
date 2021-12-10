@@ -197,5 +197,5 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successfully Registered a new trainning plan |  -  |
-**400** | Invalid Request |  -  |
+**400** | Invalid request |  -  |
 
