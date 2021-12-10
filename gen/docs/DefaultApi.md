@@ -4,9 +4,9 @@ All URIs are relative to *http://localhost/training/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**plansGet**](DefaultApi.md#plansGet) | **GET** /plans | 
-[**plansPlannerNameGet**](DefaultApi.md#plansPlannerNameGet) | **GET** /plans/{planner_name} | 
-[**plansPost**](DefaultApi.md#plansPost) | **POST** /plans | 
+[**plansGet**](test/openApiTest/src/gen/docs/DefaultApi.md#plansGet) | **GET** /plans | 
+[**plansPlannerNameGet**](test/openApiTest/src/gen/docs/DefaultApi.md#plansPlannerNameGet) | **GET** /plans/{planner_name} | 
+[**plansPost**](test/openApiTest/src/gen/docs/DefaultApi.md#plansPost) | **POST** /plans | 
 
 
 <a name="plansGet"></a>
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;Plan&gt;**](Plan.md)
+[**List&lt;Plan&gt;**](test/openApiTest/src/gen/docs/Plan.md)
 
 ### Authorization
 
@@ -178,7 +178,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **inlineObject** | [**InlineObject**](InlineObject.md)|  |
+ **inlineObject** | [**InlineObject**](test/openApiTest/src/gen/docs/InlineObject.md)|  |
 
 ### Return type
 

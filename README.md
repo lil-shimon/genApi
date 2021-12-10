@@ -108,16 +108,16 @@ All URIs are relative to *http://localhost/training/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**plansGet**](docs/DefaultApi.md#plansGet) | **GET** /plans | 
-*DefaultApi* | [**plansPlannerNameGet**](docs/DefaultApi.md#plansPlannerNameGet) | **GET** /plans/{planner_name} | 
-*DefaultApi* | [**plansPost**](docs/DefaultApi.md#plansPost) | **POST** /plans | 
+*DefaultApi* | [**plansGet**](test/openApiTest/src/gen/docs/DefaultApi.md#plansGet) | **GET** /plans | 
+*DefaultApi* | [**plansPlannerNameGet**](test/openApiTest/src/gen/docs/DefaultApi.md#plansPlannerNameGet) | **GET** /plans/{planner_name} | 
+*DefaultApi* | [**plansPost**](test/openApiTest/src/gen/docs/DefaultApi.md#plansPost) | **POST** /plans | 
 
 
 ## Documentation for Models
 
- - [InlineObject](docs/InlineObject.md)
- - [InlineResponse400](docs/InlineResponse400.md)
- - [Plan](docs/Plan.md)
+ - [InlineObject](test/openApiTest/src/gen/docs/InlineObject.md)
+ - [InlineResponse400](test/openApiTest/src/gen/docs/InlineResponse400.md)
+ - [Plan](test/openApiTest/src/gen/docs/Plan.md)
 
 
 ## Documentation for Authorization
