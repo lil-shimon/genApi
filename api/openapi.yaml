@@ -1,0 +1,173 @@
+openapi: 3.0.0
+info:
+  description: A simple menu for exercise
+  title: Training Menu API
+  version: 1.0.0
+servers:
+- url: http://localhost/training/v1
+paths:
+  /plans:
+    get:
+      description: Return a list of training plans
+      parameters:
+      - description: Limit the number of plans on a page
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: Specifies the page number of the plans to be displayed
+        explode: true
+        in: query
+        name: offset
+        required: false
+        schema:
+          type: integer
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/inline_response_200'
+                type: array
+          description: Successfully returned a list of traning plans
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_400'
+          description: Invalid request
+      x-accepts: application/json
+    post:
+      description: Register a new plan
+      requestBody:
+        $ref: '#/components/requestBodies/inline_object'
+        content:
+          application/json:
+            schema:
+              properties:
+                plan_id:
+                  type: integer
+                planner_name:
+                  type: string
+                plan_name:
+                  type: string
+                duration:
+                  type: integer
+                difficulty:
+                  type: integer
+              required:
+              - plan_id
+              type: object
+        required: true
+      responses:
+        "200":
+          description: Successfully Registered a new trainning plan
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_400'
+          description: Invalid Request
+      x-contentType: application/json
+      x-accepts: application/json
+  /plans/{planner_name}:
+    get:
+      description: Get information about the plan registerd by the described planner
+      parameters:
+      - explode: false
+        in: path
+        name: planner_name
+        required: true
+        schema:
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/inline_response_200_1'
+                type: array
+          description: Successfully returned a list of training plans
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_400'
+          description: Invalid request
+      x-accepts: application/json
+components:
+  requestBodies:
+    inline_object:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/inline_object'
+      required: true
+  schemas:
+    inline_response_200_1:
+      example:
+        duration: 6
+        difficulty: 1
+        planner_name: planner_name
+        plan_id: 0
+        plan_name: plan_name
+      properties:
+        plan_id:
+          type: integer
+        plan_name:
+          type: string
+        planner_name:
+          type: string
+        duration:
+          type: integer
+        difficulty:
+          type: integer
+      required:
+      - plan_id
+      type: object
+    inline_response_200:
+      example:
+        duration: 6
+        difficulty: 1
+        plan_id: 0
+        plan_name: plan_name
+      properties:
+        plan_id:
+          type: integer
+        plan_name:
+          type: string
+        duration:
+          type: integer
+        difficulty:
+          type: integer
+      required:
+      - plan_id
+      type: object
+    inline_object:
+      properties:
+        plan_id:
+          type: integer
+        planner_name:
+          type: string
+        plan_name:
+          type: string
+        duration:
+          type: integer
+        difficulty:
+          type: integer
+      required:
+      - plan_id
+      type: object
+    inline_response_400:
+      properties:
+        message:
+          type: string
+      type: object
+
