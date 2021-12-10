@@ -2,7 +2,7 @@
 
 Training Menu API
 - API version: 1.0.0
-  - Build date: 2021-12-10T14:15:06.275212+09:00[Asia/Tokyo]
+  - Build date: 2021-12-10T14:30:08.125615+09:00[Asia/Tokyo]
 
 A simple menu for exercise
 
@@ -88,7 +88,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the number of plans on a page
     Integer offset = 56; // Integer | Specifies the page number of the plans to be displayed
     try {
-      List<InlineResponse200> result = apiInstance.plansGet(limit, offset);
+      List<Object> result = apiInstance.plansGet(limit, offset);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#plansGet");
@@ -116,9 +116,8 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [InlineObject](docs/InlineObject.md)
- - [InlineResponse200](docs/InlineResponse200.md)
- - [InlineResponse2001](docs/InlineResponse2001.md)
  - [InlineResponse400](docs/InlineResponse400.md)
+ - [Plan](docs/Plan.md)
 
 
 ## Documentation for Authorization

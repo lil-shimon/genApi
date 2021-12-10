@@ -28,9 +28,8 @@ import java.io.IOException;
 
 
 import org.openapitools.client.model.InlineObject;
-import org.openapitools.client.model.InlineResponse200;
-import org.openapitools.client.model.InlineResponse2001;
 import org.openapitools.client.model.InlineResponse400;
+import org.openapitools.client.model.Plan;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -123,7 +122,7 @@ public class DefaultApi {
      * Return a list of training plans
      * @param limit Limit the number of plans on a page (optional)
      * @param offset Specifies the page number of the plans to be displayed (optional)
-     * @return List&lt;InlineResponse200&gt;
+     * @return List&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -132,8 +131,8 @@ public class DefaultApi {
         <tr><td> 400 </td><td> Invalid request </td><td>  -  </td></tr>
      </table>
      */
-    public List<InlineResponse200> plansGet(Integer limit, Integer offset) throws ApiException {
-        ApiResponse<List<InlineResponse200>> localVarResp = plansGetWithHttpInfo(limit, offset);
+    public List<Object> plansGet(Integer limit, Integer offset) throws ApiException {
+        ApiResponse<List<Object>> localVarResp = plansGetWithHttpInfo(limit, offset);
         return localVarResp.getData();
     }
 
@@ -142,7 +141,7 @@ public class DefaultApi {
      * Return a list of training plans
      * @param limit Limit the number of plans on a page (optional)
      * @param offset Specifies the page number of the plans to be displayed (optional)
-     * @return ApiResponse&lt;List&lt;InlineResponse200&gt;&gt;
+     * @return ApiResponse&lt;List&lt;Object&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -151,9 +150,9 @@ public class DefaultApi {
         <tr><td> 400 </td><td> Invalid request </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<InlineResponse200>> plansGetWithHttpInfo(Integer limit, Integer offset) throws ApiException {
+    public ApiResponse<List<Object>> plansGetWithHttpInfo(Integer limit, Integer offset) throws ApiException {
         okhttp3.Call localVarCall = plansGetValidateBeforeCall(limit, offset, null);
-        Type localVarReturnType = new TypeToken<List<InlineResponse200>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<Object>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -172,10 +171,10 @@ public class DefaultApi {
         <tr><td> 400 </td><td> Invalid request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call plansGetAsync(Integer limit, Integer offset, final ApiCallback<List<InlineResponse200>> _callback) throws ApiException {
+    public okhttp3.Call plansGetAsync(Integer limit, Integer offset, final ApiCallback<List<Object>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = plansGetValidateBeforeCall(limit, offset, _callback);
-        Type localVarReturnType = new TypeToken<List<InlineResponse200>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<Object>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -241,7 +240,7 @@ public class DefaultApi {
      * 
      * Get information about the plan registerd by the described planner
      * @param plannerName  (required)
-     * @return List&lt;InlineResponse2001&gt;
+     * @return List&lt;Plan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -250,8 +249,8 @@ public class DefaultApi {
         <tr><td> 400 </td><td> Invalid request </td><td>  -  </td></tr>
      </table>
      */
-    public List<InlineResponse2001> plansPlannerNameGet(String plannerName) throws ApiException {
-        ApiResponse<List<InlineResponse2001>> localVarResp = plansPlannerNameGetWithHttpInfo(plannerName);
+    public List<Plan> plansPlannerNameGet(String plannerName) throws ApiException {
+        ApiResponse<List<Plan>> localVarResp = plansPlannerNameGetWithHttpInfo(plannerName);
         return localVarResp.getData();
     }
 
@@ -259,7 +258,7 @@ public class DefaultApi {
      * 
      * Get information about the plan registerd by the described planner
      * @param plannerName  (required)
-     * @return ApiResponse&lt;List&lt;InlineResponse2001&gt;&gt;
+     * @return ApiResponse&lt;List&lt;Plan&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -268,9 +267,9 @@ public class DefaultApi {
         <tr><td> 400 </td><td> Invalid request </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<InlineResponse2001>> plansPlannerNameGetWithHttpInfo(String plannerName) throws ApiException {
+    public ApiResponse<List<Plan>> plansPlannerNameGetWithHttpInfo(String plannerName) throws ApiException {
         okhttp3.Call localVarCall = plansPlannerNameGetValidateBeforeCall(plannerName, null);
-        Type localVarReturnType = new TypeToken<List<InlineResponse2001>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<Plan>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -288,10 +287,10 @@ public class DefaultApi {
         <tr><td> 400 </td><td> Invalid request </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call plansPlannerNameGetAsync(String plannerName, final ApiCallback<List<InlineResponse2001>> _callback) throws ApiException {
+    public okhttp3.Call plansPlannerNameGetAsync(String plannerName, final ApiCallback<List<Plan>> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = plansPlannerNameGetValidateBeforeCall(plannerName, _callback);
-        Type localVarReturnType = new TypeToken<List<InlineResponse2001>>(){}.getType();
+        Type localVarReturnType = new TypeToken<List<Plan>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

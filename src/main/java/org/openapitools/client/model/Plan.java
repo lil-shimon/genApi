@@ -25,10 +25,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * InlineObject
+ * Plan
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T14:30:08.125615+09:00[Asia/Tokyo]")
-public class InlineObject {
+public class Plan {
   public static final String SERIALIZED_NAME_PLAN_ID = "plan_id";
   @SerializedName(SERIALIZED_NAME_PLAN_ID)
   private Integer planId;
@@ -50,7 +50,7 @@ public class InlineObject {
   private Integer difficulty;
 
 
-  public InlineObject planId(Integer planId) {
+  public Plan planId(Integer planId) {
     
     this.planId = planId;
     return this;
@@ -72,7 +72,7 @@ public class InlineObject {
   }
 
 
-  public InlineObject plannerName(String plannerName) {
+  public Plan plannerName(String plannerName) {
     
     this.plannerName = plannerName;
     return this;
@@ -95,7 +95,7 @@ public class InlineObject {
   }
 
 
-  public InlineObject planName(String planName) {
+  public Plan planName(String planName) {
     
     this.planName = planName;
     return this;
@@ -118,7 +118,7 @@ public class InlineObject {
   }
 
 
-  public InlineObject duration(Integer duration) {
+  public Plan duration(Integer duration) {
     
     this.duration = duration;
     return this;
@@ -141,7 +141,7 @@ public class InlineObject {
   }
 
 
-  public InlineObject difficulty(Integer difficulty) {
+  public Plan difficulty(Integer difficulty) {
     
     this.difficulty = difficulty;
     return this;
@@ -172,12 +172,12 @@ public class InlineObject {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineObject inlineObject = (InlineObject) o;
-    return Objects.equals(this.planId, inlineObject.planId) &&
-        Objects.equals(this.plannerName, inlineObject.plannerName) &&
-        Objects.equals(this.planName, inlineObject.planName) &&
-        Objects.equals(this.duration, inlineObject.duration) &&
-        Objects.equals(this.difficulty, inlineObject.difficulty);
+    Plan plan = (Plan) o;
+    return Objects.equals(this.planId, plan.planId) &&
+        Objects.equals(this.plannerName, plan.plannerName) &&
+        Objects.equals(this.planName, plan.planName) &&
+        Objects.equals(this.duration, plan.duration) &&
+        Objects.equals(this.difficulty, plan.difficulty);
   }
 
   @Override
@@ -189,7 +189,7 @@ public class InlineObject {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineObject {\n");
+    sb.append("class Plan {\n");
     sb.append("    planId: ").append(toIndentedString(planId)).append("\n");
     sb.append("    plannerName: ").append(toIndentedString(plannerName)).append("\n");
     sb.append("    planName: ").append(toIndentedString(planName)).append("\n");

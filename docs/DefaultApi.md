@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="plansGet"></a>
 # **plansGet**
-> List&lt;InlineResponse200&gt; plansGet(limit, offset)
+> List&lt;Object&gt; plansGet(limit, offset)
 
 
 
@@ -35,7 +35,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the number of plans on a page
     Integer offset = 56; // Integer | Specifies the page number of the plans to be displayed
     try {
-      List<InlineResponse200> result = apiInstance.plansGet(limit, offset);
+      List<Object> result = apiInstance.plansGet(limit, offset);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#plansGet");
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;InlineResponse200&gt;**](InlineResponse200.md)
+**List&lt;Object&gt;**
 
 ### Authorization
 
@@ -76,7 +76,7 @@ No authorization required
 
 <a name="plansPlannerNameGet"></a>
 # **plansPlannerNameGet**
-> List&lt;InlineResponse2001&gt; plansPlannerNameGet(plannerName)
+> List&lt;Plan&gt; plansPlannerNameGet(plannerName)
 
 
 
@@ -99,7 +99,7 @@ public class Example {
     DefaultApi apiInstance = new DefaultApi(defaultClient);
     String plannerName = "plannerName_example"; // String | 
     try {
-      List<InlineResponse2001> result = apiInstance.plansPlannerNameGet(plannerName);
+      List<Plan> result = apiInstance.plansPlannerNameGet(plannerName);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#plansPlannerNameGet");
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;InlineResponse2001&gt;**](InlineResponse2001.md)
+[**List&lt;Plan&gt;**](Plan.md)
 
 ### Authorization
 
