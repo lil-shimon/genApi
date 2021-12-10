@@ -147,9 +147,9 @@ components:
       properties:
         plan_id:
           type: integer
-        planner_name:
-          type: string
         plan_name:
+          type: string
+        planner_name:
           type: string
         duration:
           type: integer

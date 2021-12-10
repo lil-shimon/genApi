@@ -2,7 +2,7 @@
 
 Training Menu API
 - API version: 1.0.0
-  - Build date: 2021-12-10T14:47:26.516791+09:00[Asia/Tokyo]
+  - Build date: 2021-12-10T14:51:15.004355+09:00[Asia/Tokyo]
 
 A simple menu for exercise
 

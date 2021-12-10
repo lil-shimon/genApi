@@ -27,19 +27,19 @@ import java.io.IOException;
 /**
  * Plan
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T14:47:26.516791+09:00[Asia/Tokyo]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T14:51:15.004355+09:00[Asia/Tokyo]")
 public class Plan {
   public static final String SERIALIZED_NAME_PLAN_ID = "plan_id";
   @SerializedName(SERIALIZED_NAME_PLAN_ID)
   private Integer planId;
 
-  public static final String SERIALIZED_NAME_PLANNER_NAME = "planner_name";
-  @SerializedName(SERIALIZED_NAME_PLANNER_NAME)
-  private String plannerName;
-
   public static final String SERIALIZED_NAME_PLAN_NAME = "plan_name";
   @SerializedName(SERIALIZED_NAME_PLAN_NAME)
   private String planName;
+
+  public static final String SERIALIZED_NAME_PLANNER_NAME = "planner_name";
+  @SerializedName(SERIALIZED_NAME_PLANNER_NAME)
+  private String plannerName;
 
   public static final String SERIALIZED_NAME_DURATION = "duration";
   @SerializedName(SERIALIZED_NAME_DURATION)
@@ -72,29 +72,6 @@ public class Plan {
   }
 
 
-  public Plan plannerName(String plannerName) {
-    
-    this.plannerName = plannerName;
-    return this;
-  }
-
-   /**
-   * Get plannerName
-   * @return plannerName
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getPlannerName() {
-    return plannerName;
-  }
-
-
-  public void setPlannerName(String plannerName) {
-    this.plannerName = plannerName;
-  }
-
-
   public Plan planName(String planName) {
     
     this.planName = planName;
@@ -115,6 +92,29 @@ public class Plan {
 
   public void setPlanName(String planName) {
     this.planName = planName;
+  }
+
+
+  public Plan plannerName(String plannerName) {
+    
+    this.plannerName = plannerName;
+    return this;
+  }
+
+   /**
+   * Get plannerName
+   * @return plannerName
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getPlannerName() {
+    return plannerName;
+  }
+
+
+  public void setPlannerName(String plannerName) {
+    this.plannerName = plannerName;
   }
 
 
@@ -174,15 +174,15 @@ public class Plan {
     }
     Plan plan = (Plan) o;
     return Objects.equals(this.planId, plan.planId) &&
-        Objects.equals(this.plannerName, plan.plannerName) &&
         Objects.equals(this.planName, plan.planName) &&
+        Objects.equals(this.plannerName, plan.plannerName) &&
         Objects.equals(this.duration, plan.duration) &&
         Objects.equals(this.difficulty, plan.difficulty);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(planId, plannerName, planName, duration, difficulty);
+    return Objects.hash(planId, planName, plannerName, duration, difficulty);
   }
 
 
@@ -191,8 +191,8 @@ public class Plan {
     StringBuilder sb = new StringBuilder();
     sb.append("class Plan {\n");
     sb.append("    planId: ").append(toIndentedString(planId)).append("\n");
-    sb.append("    plannerName: ").append(toIndentedString(plannerName)).append("\n");
     sb.append("    planName: ").append(toIndentedString(planName)).append("\n");
+    sb.append("    plannerName: ").append(toIndentedString(plannerName)).append("\n");
     sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
     sb.append("    difficulty: ").append(toIndentedString(difficulty)).append("\n");
     sb.append("}");
